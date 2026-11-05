@@ -65,4 +65,6 @@ ${js}
 `;
 const out = local ? html.replaceAll(ASSET, "/assets") : html;
 writeFileSync(local ? "dist/local.html" : "index.html", out);
+// Vercel (and any static host that wants an output folder) publishes dist/.
+if (!local) writeFileSync("dist/index.html", out);
 console.log(local ? "dist/local.html" : "index.html", (html.length / 1024).toFixed(0) + " KB");
