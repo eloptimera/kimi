@@ -1,0 +1,103 @@
+:root {
+  --raw-color-ice-50: #f7fafb;        /* frame fill */
+  --raw-color-ice-100: #ebeef1;       /* backdrop contour lines */
+  --raw-color-ice-200: #dfe5e9;       /* hairlines & dividers */
+  --raw-color-steel-400: #b6c1c8;     /* muted copy on dark */
+  --raw-color-ink-950: #090a0b;       /* all body copy */
+  --raw-color-ink-900: #0e0f14;       /* "view profile" panel fill */
+  --raw-color-ink-800: #1b1d24;
+  --raw-color-ink-700: #2a2d36;
+  --raw-color-ink-alpha-35: rgb(9 10 11 / 0.35);   /* driver_012, 01:26 */
+  --raw-color-slate-500: #7a7a7a;     /* season map: the halftone */
+  --raw-color-slate-600: #4d4d4d;     /* season map: grid lines, inner ring */
+  --raw-color-slate-900: #1e1e1e;     /* season map: the two outer rings */
+  --raw-color-cyan-400: #02d2e3;      /* accent */
+  --raw-color-cyan-alpha-25: rgb(2 210 227 / 0.25);
+  --raw-color-stone-600: #535450;     /* timeline: plate outline */
+  --raw-color-white-alpha-10: rgb(255 255 255 / 0.1);  /* timeline plate fill; footer contours */
+  --raw-color-white-alpha-20: rgb(255 255 255 / 0.2);  /* timeline: the rail */
+  --raw-color-ink-alpha-08: rgb(9 10 11 / 0.08);       /* paddock: the contour lines */
+  --raw-color-white-alpha-40: rgb(255 255 255 / 0.4);  /* footer: the copyright */
+  --raw-color-white: #ffffff;
+  --raw-color-orange-500: #ff6b00;    /* error/warning only — never on the page */
+
+  --raw-font-size-96: 6rem;      /* "kimi antonelli" */
+  --raw-font-size-70: 4.375rem;  /* the name on phones */
+  --raw-font-size-52: 3.25rem;   /* the headline below 1024 */
+  --raw-font-size-38: 2.375rem;  /* stat figures */
+  --raw-font-size-20: 1.25rem;   /* "view profile" */
+  --raw-font-size-18: 1.125rem;  /* driver meta rows */
+  --raw-font-size-16: 1rem;      /* nav, "[ Garage → ]" */
+  --raw-font-size-14: 0.875rem;  /* panel body, "watch trailer", socials */
+  --raw-font-size-12: 0.75rem;   /* panel eyebrows, stat labels */
+  --raw-font-size-55: 3.4375rem; /* "the season so far" */
+  --raw-font-size-36: 2.25rem;   /* timeline years */
+
+  --raw-leading-95: 0.95;   /* headline */
+  --raw-leading-90: 0.9;    /* every other uppercase run */
+  --raw-leading-72: 0.72;   /* cap-height text-box trim */
+  --raw-leading-110: 1.1;   /* floor for clipped text reveals */
+  --raw-tracking-stat: -0.08em;
+  --raw-tracking-label: -0.04em;
+  --raw-tracking-eyebrow: -0.02em;
+
+  --raw-radius-16: 1rem; --raw-radius-48: 3rem; --raw-radius-100: 6.25rem;
+  --raw-duration-fast: 150ms; --raw-duration-normal: 250ms; --raw-duration-slow: 700ms;
+  --raw-edge-fade-share: 10%; --raw-edge-fade-length: 6rem;
+
+  /* Tier 2 — roles */
+  --background: var(--raw-color-ice-50);
+  --foreground: var(--raw-color-ink-950);
+  --foreground-muted: var(--raw-color-ink-alpha-35);
+  --surface-dark: var(--raw-color-ink-900);
+  --surface-dark-raised: var(--raw-color-ink-800);
+  --surface-black: var(--raw-color-ink-950);
+  --surface-muted: var(--raw-color-ice-100);
+  --surface-soft: var(--raw-color-ice-200);
+  --foreground-on-dark: var(--raw-color-white);
+  --foreground-on-dark-muted: var(--raw-color-steel-400);
+  --foreground-on-dark-faint: var(--raw-color-white-alpha-40);
+  --border-muted: var(--raw-color-ice-200);
+  --border-on-dark: var(--raw-color-ink-700);
+  --map-dot: var(--raw-color-slate-500);
+  --map-grid: var(--raw-color-slate-600);
+  --map-grid-ghost: var(--raw-color-slate-900);
+  --map-mark: var(--raw-color-ice-50);
+  --timeline-outline: var(--raw-color-stone-600);
+  --timeline-fill: var(--raw-color-white-alpha-10);
+  --timeline-rail: var(--raw-color-white-alpha-20);
+  --paddock-contour: var(--raw-color-ink-alpha-08);
+  --footer-contour: var(--raw-color-white-alpha-10);
+  --accent: var(--raw-color-cyan-400);
+  --accent-muted: var(--raw-color-cyan-alpha-25);
+  --type-impact: var(--raw-font-size-96); --type-display-lg: var(--raw-font-size-70);
+  --type-display: var(--raw-font-size-52); --type-heading: var(--raw-font-size-38);
+  --type-title: var(--raw-font-size-20); --type-lead: var(--raw-font-size-18);
+  --type-label: var(--raw-font-size-16); --type-body: var(--raw-font-size-14);
+  --type-eyebrow: var(--raw-font-size-12); --type-display-sm: var(--raw-font-size-55);
+  --type-year: var(--raw-font-size-36);
+  --leading-headline: 0.95; --leading-flat: 0.9; --leading-cap: 0.72; --leading-display: 1.1;
+  --duration-fast: 150ms; --duration-normal: 250ms; --duration-plate: 700ms;
+  --ease-entrance: cubic-bezier(0.2, 0, 0, 1);
+  --ease-plate: cubic-bezier(0.33, 0, 0, 1);
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-display: "Oswald", Impact, sans-serif;
+}
+body { background: var(--background); color: var(--foreground); min-height: 100lvh; margin: 0; }html { font-size: 16px; }
+@media (max-width: 1920px) { html { font-size: 0.833333vw; } }   /* 16·100/1920 */
+@media (max-width: 1440px) { html { font-size: 1.111111vw; } }   /* 16·100/1440 */
+@media (max-width: 1279px) { html { font-size: 16px; } }@media (min-width: 1441px) and (max-width: 1920px) {
+  [data-hero]   { --hero-base: calc(1920 / 1440);
+    --type-impact: calc(6rem * var(--hero-base)); --type-display-lg: calc(4.375rem * var(--hero-base));
+    --type-display: calc(3.25rem * var(--hero-base)); --type-heading: calc(2.375rem * var(--hero-base));
+    --type-title: calc(1.25rem * var(--hero-base)); --type-lead: calc(1.125rem * var(--hero-base));
+    --type-label: calc(1rem * var(--hero-base)); --type-body: calc(0.875rem * var(--hero-base));
+    --type-eyebrow: calc(0.75rem * var(--hero-base)); }
+  [data-hero] [data-hero-panels] { width: calc(13.625rem * var(--hero-base, 1)); }
+  [data-hero] [data-hero-stats]  { width: calc(10.75rem * var(--hero-base, 1)); }
+  [data-hero] [data-hero-map]    { height: calc(3.125rem * var(--hero-base, 1)); width: calc(4.875rem * var(--hero-base, 1)); }
+  [data-season] { --season-base: calc(1920 / 1440);
+    --type-display-sm: calc(3.4375rem * var(--season-base)); --type-lead: calc(1.125rem * var(--season-base));
+    --type-body: calc(0.875rem * var(--season-base)); --type-eyebrow: calc(0.75rem * var(--season-base)); }
+}
+body { background: var(--background); color: var(--foreground); min-height: 100lvh; margin: 0; }
